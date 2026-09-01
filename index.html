@@ -1,1 +1,1846 @@
-sddd
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Heated Hair Volume Clip Styler - AllWant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <style>
+        /* ═══ RESET & BASE ═══ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fcf7f4;
+            color: #1e1310;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ═══ TYPOGRAPHY ═══ */
+        .ff-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .text-gold {
+            color: #b8865a;
+        }
+        .text-rose {
+            color: #b83b5e;
+        }
+        .text-dark {
+            color: #1e1310;
+        }
+
+        /* ═══ HEADER ═══ */
+        .header {
+            background: rgba(255, 249, 247, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(184, 134, 90, 0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 24px rgba(0, 0, 0, 0.04);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .header-brand img {
+            height: 44px;
+            width: auto;
+            border-radius: 10px;
+            object-fit: contain;
+            background: #fff;
+            padding: 4px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .header-brand h1 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #1e1310;
+        }
+        .header-brand h1 span {
+            color: #b83b5e;
+        }
+        .header-cta {
+            background: #b83b5e;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.3px;
+            transition: background 0.25s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 14px rgba(184, 59, 94, 0.3);
+        }
+        .header-cta:hover {
+            background: #a03250;
+            transform: translateY(-2px);
+        }
+        .header-cta svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ═══ HERO ═══ */
+        .hero {
+            padding: 48px 0 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(184, 59, 94, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            position: relative;
+        }
+        .hero-image {
+            position: relative;
+            text-align: center;
+        }
+        .hero-image img {
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+            width: 100%;
+            max-width: 520px;
+            margin: 0 auto;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            background: #f5ede8;
+            border: 1px solid rgba(184, 134, 90, 0.12);
+        }
+        .hero-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #b83b5e;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 16px rgba(184, 59, 94, 0.3);
+            animation: pulse-badge 2s ease-in-out infinite;
+        }
+        @keyframes pulse-badge {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.04);
+            }
+        }
+        .hero-content h2 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.03em;
+            margin-bottom: 12px;
+        }
+        .hero-content h2 .highlight {
+            background: linear-gradient(135deg, #b83b5e, #d48a9e);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-tagline {
+            font-size: 1.15rem;
+            color: #4d322a;
+            margin-bottom: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        .hero-tagline strong {
+            color: #b83b5e;
+            font-weight: 600;
+        }
+        .hero-cta-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 20px;
+        }
+        .btn-primary {
+            background: #b83b5e;
+            color: #fff;
+            padding: 16px 40px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 0 8px 28px rgba(184, 59, 94, 0.35);
+            letter-spacing: 0.3px;
+        }
+        .btn-primary:hover {
+            background: #a03250;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 36px rgba(184, 59, 94, 0.4);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: #1e1310;
+            padding: 16px 32px;
+            border-radius: 60px;
+            font-weight: 600;
+            font-size: 1rem;
+            border: 2px solid #d4c0b8;
+            cursor: pointer;
+            transition: all 0.25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-secondary:hover {
+            border-color: #b83b5e;
+            color: #b83b5e;
+            transform: translateY(-2px);
+        }
+        .hero-stats {
+            display: flex;
+            gap: 32px;
+            margin-top: 28px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(184, 134, 90, 0.15);
+        }
+        .hero-stats .stat {
+            display: flex;
+            flex-direction: column;
+        }
+        .hero-stats .stat .number {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #b83b5e;
+            letter-spacing: -0.02em;
+        }
+        .hero-stats .stat .label {
+            font-size: 0.8rem;
+            color: #7a5f55;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ═══ SECTION COMMON ═══ */
+        .section {
+            padding: 60px 0;
+        }
+        .section-label {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #b83b5e;
+            background: rgba(184, 59, 94, 0.08);
+            padding: 4px 16px;
+            border-radius: 40px;
+            margin-bottom: 12px;
+        }
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .section-title .highlight {
+            color: #b83b5e;
+        }
+        .section-sub {
+            font-size: 1.05rem;
+            color: #4d322a;
+            max-width: 600px;
+            line-height: 1.7;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .mx-auto {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ═══ PROBLEM + SOLUTION ═══ */
+        .ps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 24px;
+        }
+        .ps-card {
+            background: #fff;
+            padding: 36px 32px;
+            border-radius: 24px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(184, 134, 90, 0.08);
+            transition: transform 0.25s;
+        }
+        .ps-card:hover {
+            transform: translateY(-4px);
+        }
+        .ps-card .icon {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .ps-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .ps-card p {
+            color: #4d322a;
+            font-size: 0.98rem;
+            line-height: 1.7;
+        }
+        .ps-card.problem {
+            border-left: 4px solid #e74c3c;
+        }
+        .ps-card.solution {
+            border-left: 4px solid #b83b5e;
+            background: linear-gradient(135deg, #fff9f7, #fff);
+        }
+
+        /* ═══ FEATURES ═══ */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 28px;
+            margin-top: 32px;
+        }
+        .feature-item {
+            background: #fff;
+            padding: 28px 20px 24px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(184, 134, 90, 0.07);
+            transition: all 0.3s;
+        }
+        .feature-item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+        }
+        .feature-item .emoji {
+            font-size: 2.6rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .feature-item p {
+            font-size: 0.88rem;
+            color: #5a423a;
+            line-height: 1.5;
+        }
+
+        /* ═══ 3 STEPS ═══ */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 32px;
+        }
+        .step-item {
+            background: #fff;
+            border-radius: 24px;
+            padding: 24px 20px 28px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(184, 134, 90, 0.07);
+            transition: transform 0.25s;
+        }
+        .step-item:hover {
+            transform: translateY(-4px);
+        }
+        .step-item .step-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #b83b5e;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+        }
+        .step-item img {
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 14px;
+            border-radius: 16px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            background: #f5ede8;
+            border: 1px solid rgba(184, 134, 90, 0.08);
+        }
+        .step-item h4 {
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-bottom: 4px;
+        }
+        .step-item p {
+            font-size: 0.9rem;
+            color: #5a423a;
+            line-height: 1.5;
+        }
+
+        /* ═══ GALLERY ═══ */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 28px;
+        }
+        .gallery-item {
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+            transition: transform 0.25s, box-shadow 0.25s;
+            border: 1px solid rgba(184, 134, 90, 0.08);
+            background: #fff;
+            aspect-ratio: 1/1;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ═══ MODAL ═══ */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+        .modal-content {
+            max-width: 90vw;
+            max-height: 90vh;
+            position: relative;
+            background: transparent;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            max-height: 85vh;
+            object-fit: contain;
+            display: block;
+        }
+        .modal-close {
+            position: absolute;
+            top: 12px;
+            right: 16px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.6rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+        }
+        .modal-close:hover {
+            background: rgba(0, 0, 0, 0.85);
+        }
+
+        /* ═══ TESTIMONIALS ═══ */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-top: 32px;
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 28px 28px 24px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(184, 134, 90, 0.07);
+            transition: transform 0.25s;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+        }
+        .testimonial-card .stars {
+            color: #f5b342;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .testimonial-card .quote {
+            font-size: 0.98rem;
+            line-height: 1.7;
+            color: #2d1b14;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .testimonial-card .author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .testimonial-card .author .avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #b83b5e;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+        .testimonial-card .author .name {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .testimonial-card .author .prof {
+            font-size: 0.8rem;
+            color: #7a5f55;
+        }
+
+        /* ═══ PRICE BANNER ═══ */
+        .price-banner {
+            background: linear-gradient(135deg, #1e1310, #2d1b14);
+            padding: 40px 32px;
+            border-radius: 28px;
+            color: #fff;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+        }
+        .price-banner::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(184, 59, 94, 0.15), transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .price-banner .inner {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            position: relative;
+            z-index: 1;
+        }
+        .price-banner .offer {
+            display: flex;
+            flex-direction: column;
+        }
+        .price-banner .offer .badge {
+            display: inline-block;
+            background: #b83b5e;
+            padding: 4px 16px;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            align-self: flex-start;
+        }
+        .price-banner .offer .price-main {
+            font-size: 2.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        .price-banner .offer .price-main small {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+        .price-banner .offer .price-cross {
+            font-size: 1.1rem;
+            color: #b0a098;
+            text-decoration: line-through;
+            margin-top: 2px;
+        }
+        .price-banner .offer .price-cross span {
+            color: #e74c3c;
+            font-weight: 600;
+        }
+        .price-banner .cta-wrap .btn-primary {
+            box-shadow: 0 8px 28px rgba(184, 59, 94, 0.5);
+            font-size: 1.1rem;
+            padding: 18px 44px;
+        }
+        .price-banner .cta-wrap .btn-primary:hover {
+            box-shadow: 0 12px 40px rgba(184, 59, 94, 0.6);
+        }
+        .price-banner .urgency-tag {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #f0c8b8;
+            font-size: 0.85rem;
+            margin-top: 6px;
+        }
+        .price-banner .urgency-tag .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #e74c3c;
+            animation: blink-dot 1.2s infinite;
+        }
+        @keyframes blink-dot {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.2;
+            }
+        }
+
+        /* ═══ COUNTDOWN ═══ */
+        .countdown-wrap {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin: 24px 0 12px;
+            flex-wrap: wrap;
+        }
+        .countdown-item {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            padding: 12px 18px;
+            border-radius: 16px;
+            text-align: center;
+            min-width: 70px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .countdown-item .num {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1.1;
+            color: #fff;
+            font-feature-settings: "tnum";
+        }
+        .countdown-item .lbl {
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #b0a098;
+            font-weight: 600;
+        }
+
+        /* ═══ COUNTERS (viewers / stock) ═══ */
+        .live-counters {
+            display: flex;
+            gap: 32px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 12px 0 4px;
+        }
+        .live-counters .counter-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #4d322a;
+        }
+        .live-counters .counter-item .num {
+            font-weight: 800;
+            color: #b83b5e;
+            font-size: 1.1rem;
+        }
+        .live-counters .counter-item .dot-online {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2ecc71;
+            display: inline-block;
+            animation: blink-dot 1.5s infinite;
+        }
+
+        /* ═══ ORDER FORM ═══ */
+        .order-section {
+            background: #fff;
+            border-radius: 28px;
+            padding: 40px 32px 32px;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(184, 134, 90, 0.08);
+            margin-top: 12px;
+        }
+        .order-section .ooef {
+            min-height: 420px;
+            position: relative;
+        }
+
+        /* ═══ FAKE POPUP ═══ */
+        .fake-popup {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            z-index: 9998;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+            padding: 16px 20px 16px 16px;
+            max-width: 340px;
+            width: calc(100vw - 48px);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            border-left: 5px solid #b83b5e;
+            animation: slideUp 0.5s ease-out;
+            transform-origin: bottom left;
+            transition: transform 0.4s, opacity 0.4s;
+        }
+        .fake-popup.swiped {
+            transform: translateX(-120%) scale(0.8);
+            opacity: 0;
+            pointer-events: none;
+        }
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        .fake-popup .popup-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #b83b5e;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        .fake-popup .popup-body {
+            flex: 1;
+            font-size: 0.88rem;
+            line-height: 1.4;
+        }
+        .fake-popup .popup-body .name {
+            font-weight: 700;
+            color: #1e1310;
+        }
+        .fake-popup .popup-body .region {
+            color: #7a5f55;
+            font-size: 0.75rem;
+        }
+        .fake-popup .popup-body .product {
+            color: #b83b5e;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+        .fake-popup .popup-close {
+            background: none;
+            border: none;
+            font-size: 1.3rem;
+            cursor: pointer;
+            color: #b0a098;
+            padding: 4px 0 0 4px;
+            transition: color 0.2s;
+            line-height: 1;
+            align-self: flex-start;
+            margin-top: -4px;
+        }
+        .fake-popup .popup-close:hover {
+            color: #1e1310;
+        }
+        .fake-popup .swipe-hint {
+            position: absolute;
+            bottom: 4px;
+            right: 14px;
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #c0b0a8;
+            opacity: 0.6;
+        }
+
+        /* ═══ FOOTER ═══ */
+        .footer {
+            background: #1e1310;
+            color: #b0a098;
+            padding: 36px 0 28px;
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(184, 134, 90, 0.08);
+        }
+        .footer a {
+            color: #d4c0b8;
+            transition: color 0.2s;
+        }
+        .footer a:hover {
+            color: #fff;
+        }
+        .footer .brand {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        /* ═══ RESPONSIVE ═══ */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-content h2 {
+                font-size: 2.1rem;
+            }
+            .hero-stats {
+                justify-content: center;
+            }
+            .hero-cta-group {
+                justify-content: center;
+            }
+            .ps-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .steps-grid .step-item:last-child {
+                grid-column: span 2;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .price-banner .inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .price-banner .offer .badge {
+                align-self: center;
+            }
+        }
+        @media (max-width: 640px) {
+            .header-inner {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .header-brand h1 {
+                font-size: 1rem;
+            }
+            .header-brand img {
+                height: 36px;
+            }
+            .header-cta {
+                padding: 8px 18px;
+                font-size: 0.75rem;
+            }
+            .hero {
+                padding: 28px 0 16px;
+            }
+            .hero-content h2 {
+                font-size: 1.7rem;
+            }
+            .hero-tagline {
+                font-size: 0.98rem;
+            }
+            .btn-primary {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+            }
+            .btn-secondary {
+                padding: 14px 24px;
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.7rem;
+            }
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            .steps-grid .step-item:last-child {
+                grid-column: span 1;
+            }
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            .price-banner .offer .price-main {
+                font-size: 2rem;
+            }
+            .price-banner {
+                padding: 28px 20px;
+            }
+            .order-section {
+                padding: 24px 16px 20px;
+            }
+            .fake-popup {
+                max-width: calc(100vw - 24px);
+                left: 12px;
+                bottom: 12px;
+                padding: 12px 14px 12px 12px;
+            }
+            .fake-popup .popup-avatar {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .fake-popup .popup-body {
+                font-size: 0.8rem;
+            }
+            .countdown-item .num {
+                font-size: 1.5rem;
+            }
+            .countdown-item {
+                min-width: 56px;
+                padding: 8px 12px;
+            }
+            .hero-stats {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .live-counters {
+                gap: 18px;
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 420px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            .price-banner .offer .price-main {
+                font-size: 1.6rem;
+            }
+            .price-banner .cta-wrap .btn-primary {
+                padding: 14px 28px;
+                font-size: 0.95rem;
+            }
+            .hero-content h2 {
+                font-size: 1.4rem;
+            }
+        }
+
+        /* ═══ UTILITY ═══ */
+        .mt-8 {
+            margin-top: 8px;
+        }
+        .mt-16 {
+            margin-top: 16px;
+        }
+        .mt-24 {
+            margin-top: 24px;
+        }
+        .mt-32 {
+            margin-top: 32px;
+        }
+        .mb-8 {
+            margin-bottom: 8px;
+        }
+        .mb-16 {
+            margin-bottom: 16px;
+        }
+        .gap-8 {
+            gap: 8px;
+        }
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .relative {
+            position: relative;
+        }
+        .bg-soft {
+            background: #f8f0ec;
+        }
+
+        /* ═══ ANIMATIONS ═══ */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .delay-1 {
+            transition-delay: 0.1s;
+        }
+        .delay-2 {
+            transition-delay: 0.2s;
+        }
+        .delay-3 {
+            transition-delay: 0.3s;
+        }
+        .delay-4 {
+            transition-delay: 0.4s;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header" id="top">
+        <div class="container header-inner">
+            <div class="header-brand">
+                <img src="https://cdn.orderonline.id/uploads/images_5090571788268086588.png" alt="AllWant Logo" loading="lazy" />
+                <h1>AllWant</span></h1>
+            </div>
+            <a href="#order" class="header-cta">
+                <svg viewBox="0 0 24 24"><path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2zm-9.83-3.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.86-7.01L19.42 4h-.01l-1.1 2-2.76 5H8.53l-.13-.27L6.16 6l-.95-2-.94-2H1v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.13 0-.25-.11-.25-.25z"/></svg>
+                Beli Sekarang
+            </a>
+        </div>
+    </header>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-image">
+                <img
+                src="https://i5.walmartimages.com/seo/Rongyun-Heated-Hair-Volume-Clip-Electric-Volumizing-Hair-Clips-Bangs-Styling-Root-Lifter-Comb-2-Heat-Settings-Fine-Flat-Hair-Styling-Quick-Volume-Tou_21585210-8f81-4b26-931f-7e3a1981ae1f.25a55c14e43bb6a196c2a313b24be7df.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF"
+                alt="Heated Hair Volume Clip Styler"
+                loading="lazy"
+                />
+                <div class="hero-badge">🔥 BUY 1 GET 1 FREE</div>
+            </div>
+            <div class="hero-content">
+                <div class="section-label">✨ AllWant</div>
+                <h2 class="ff-serif">
+                    Rambut <span class="highlight">Lebih Volume</span><br />
+                    Hanya dalam Hitungan Menit!
+                </h2>
+                <p class="hero-tagline">
+                    <strong>💇‍♀️ RAMBUT LEPEK?</strong> Cukup jepit di bagian akar,
+                    panaskan, lalu lepas — <strong>volume instan</strong> tanpa ribet!
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#order" class="btn-primary">
+                        🛒 Beli Sekarang — Rp134.000
+                    </a>
+                    <a href="#features" class="btn-secondary">
+                        Lihat Fitur →
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number" id="viewerCount">1.2k</span>
+                        <span class="label">Viewer Saat Ini</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number" id="stockCount">37</span>
+                        <span class="label">Stok Tersisa</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">⭐ 4.9</span>
+                        <span class="label">Rating Customer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ LIVE COUNTERS (floating under hero) ═══ -->
+    <div class="container" style="margin-top:-8px;">
+        <div class="live-counters">
+            <span class="counter-item">
+                <span class="dot-online"></span>
+                <span><span class="num" id="viewerCount2">1.2k</span> orang melihat</span>
+            </span>
+            <span class="counter-item">
+                🛒 <span><span class="num" id="stockCount2">37</span> tersisa</span>
+            </span>
+            <span class="counter-item">
+                ⏳ <span>promo berakhir dalam <strong id="countdownShort">02:30:00</strong></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ═══ PROBLEM + SOLUTION ═══ -->
+    <section class="section bg-soft" id="about">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">💡 Masalah &amp; Solusi</span>
+                <h2 class="section-title ff-serif">
+                    Rambut Flat? <span class="highlight">Kami Punya Jawabannya</span>
+                </h2>
+                <p class="section-sub mx-auto" style="max-width:640px;">
+                    Produk ini dirancang khusus untuk wanita Indonesia usia 23–60 tahun
+                    yang ingin rambut bervolume tanpa harus ke salon.
+                </p>
+            </div>
+            <div class="ps-grid">
+                <div class="ps-card problem">
+                    <span class="icon">😩</span>
+                    <h3>Masalah</h3>
+                    <p>
+                        Rambut lepek, flat, dan kurang bervolume membuat penampilan
+                        terlihat lesu. Poni tidak mau berdiri, akar rambut rata,
+                        dan styling memakan waktu lama.
+                    </p>
+                </div>
+                <div class="ps-card solution">
+                    <span class="icon">✨</span>
+                    <h3>Solusi</h3>
+                    <p>
+                        <strong>Heated Hair Volume Clip Styler</strong> — jepit di akar,
+                        panaskan 10–15 detik, lepas, dan <strong>volume instan</strong>!
+                        Praktis, aman, dan cocok untuk semua jenis rambut.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FEATURES ═══ -->
+    <section class="section" id="features">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">⚡ Unggulan</span>
+                <h2 class="section-title ff-serif">
+                    Fitur <span class="highlight">Premium</span> yang Wajib Kamu Punya
+                </h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item fade-up delay-1">
+                    <span class="emoji">🔥</span>
+                    <h4>2 Pilihan Suhu</h4>
+                    <p>Sesuaikan dengan jenis rambutmu — low &amp; high heat.</p>
+                </div>
+                <div class="feature-item fade-up delay-2">
+                    <span class="emoji">💨</span>
+                    <h4>Volume Instan</h4>
+                    <p>Angkat akar rambut dalam 10–15 detik, hasil tahan lama.</p>
+                </div>
+                <div class="feature-item fade-up delay-3">
+                    <span class="emoji">🎀</span>
+                    <h4>Cocok untuk Poni &amp; Rambut Lepek</h4>
+                    <p>Ideal untuk semua area rambut yang butuh volume ekstra.</p>
+                </div>
+                <div class="feature-item fade-up delay-4">
+                    <span class="emoji">🔋</span>
+                    <h4>Praktis &amp; Portabel</h4>
+                    <p>Bawa ke mana saja, siap pakai kapan pun dibutuhkan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 3 STEPS ═══ -->
+    <section class="section bg-soft" id="steps">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">📋 Cara Pakai</span>
+                <h2 class="section-title ff-serif">
+                    Hanya <span class="highlight">3 Langkah</span> Mudah
+                </h2>
+                <p class="section-sub mx-auto" style="max-width:540px;">
+                    Dapatkan rambut bervolume tanpa repot. Ikuti langkah ini!
+                </p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-item fade-up delay-1">
+                    <div class="step-num">1</div>
+                    <img
+                    src="https://i5.walmartimages.com/asr/5c262e9b-46cc-4f3e-b71c-8d1f9ad0dcf0.7cb9f0a9126ef2b8e635e4e8572da7b6.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF"
+                    alt="Step 1"
+                    loading="lazy"
+                    />
+                    <h4>Jepit di Akar Rambut</h4>
+                    <p>Ambil sehelai rambut, jepit clip di bagian akar yang ingin diangkat.</p>
+                </div>
+                <div class="step-item fade-up delay-2">
+                    <div class="step-num">2</div>
+                    <img
+                    src="https://i5.walmartimages.com/asr/5c262e9b-46cc-4f3e-b71c-8d1f9ad0dcf0.7cb9f0a9126ef2b8e635e4e8572da7b6.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF"
+                    alt="Step 2"
+                    loading="lazy"
+                    />
+                    <h4>Panaskan 10–15 Detik</h4>
+                    <p>Pilih suhu sesuai kebutuhan, diamkan sebentar agar akar terbentuk.</p>
+                </div>
+                <div class="step-item fade-up delay-3">
+                    <div class="step-num">3</div>
+                    <img
+                    src="https://i5.walmartimages.com/asr/5c262e9b-46cc-4f3e-b71c-8d1f9ad0dcf0.7cb9f0a9126ef2b8e635e4e8572da7b6.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF"
+                    alt="Step 3"
+                    loading="lazy"
+                    />
+                    <h4>Lepas &amp; Tatan</h4>
+                    <p>Lepaskan clip, rambut volume siap! Tata sesuai gaya favoritmu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ GALLERY ═══ -->
+    <section class="section" id="gallery">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">🖼️ Galeri</span>
+                <h2 class="section-title ff-serif">
+                    Lihat <span class="highlight">Produk</span> Lebih Dekat
+                </h2>
+                <p class="section-sub mx-auto" style="max-width:480px;">
+                    Klik gambar untuk melihat dalam ukuran asli.
+                </p>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <div class="gallery-item" data-src="https://i5.walmartimages.com/asr/fdee573c-d085-4490-bbba-8784b1fa94f5.87d0dc659e935c4964be9b3c6ff705c3.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF">
+                    <img src="https://i5.walmartimages.com/asr/fdee573c-d085-4490-bbba-8784b1fa94f5.87d0dc659e935c4964be9b3c6ff705c3.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF" alt="Product 1" loading="lazy" />
+                </div>
+                <div class="gallery-item" data-src="https://i5.walmartimages.com/asr/58b26046-a2ba-4da8-8ff2-818f56e951de.bb4b8974f2dc81ce993f005205d90094.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF">
+                    <img src="https://i5.walmartimages.com/asr/58b26046-a2ba-4da8-8ff2-818f56e951de.bb4b8974f2dc81ce993f005205d90094.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF" alt="Product 2" loading="lazy" />
+                </div>
+                <div class="gallery-item" data-src="https://i5.walmartimages.com/asr/97e0c74f-f42c-4769-9502-747be2efaa1f.1ab1547ceb7324c80803e3215c67807e.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF">
+                    <img src="https://i5.walmartimages.com/asr/97e0c74f-f42c-4769-9502-747be2efaa1f.1ab1547ceb7324c80803e3215c67807e.jpeg?odnHeight=573&odnWidth=573&odnBg=FFFFFF" alt="Product 3" loading="lazy" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ MODAL ═══ -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">✕</button>
+            <img src="" alt="Product zoom" id="modalImage" />
+        </div>
+    </div>
+
+    <!-- ═══ TESTIMONIALS ═══ -->
+    <section class="section bg-soft" id="testimonials">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">💬 Testimoni</span>
+                <h2 class="section-title ff-serif">
+                    Kata <span class="highlight">Customer</span> Kami
+                </h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-up delay-1">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">
+                        “Aku pakai ini buat ngangkat poni, hasilnya langsung volume!
+                        Gak pakai lama, praktis banget. Rekomendasi banget buat yang
+                        rambutnya lepek kayak aku.”
+                    </p>
+                    <div class="author">
+                        <div class="avatar">DN</div>
+                        <div>
+                            <div class="name">Dewi N.</div>
+                            <div class="prof">Karyawan Swasta, 29</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up delay-2">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">
+                        “Suka banget sama hasilnya! Rambut jadi lebih berisi dan
+                        gak lepek seharian. Ukurannya kecil jadi gampang dibawa
+                        ke kantor.”
+                    </p>
+                    <div class="author">
+                        <div class="avatar">RA</div>
+                        <div>
+                            <div class="name">Rina A.</div>
+                            <div class="prof">Ibu Rumah Tangga, 41</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up delay-3">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">
+                        “Awalnya ragu, tapi setelah coba ternyata ampuh! Rambut
+                        aku yang tipis jadi kelihatan lebih tebal. Dua pilihan suhu
+                        juga membantu.”
+                    </p>
+                    <div class="author">
+                        <div class="avatar">SM</div>
+                        <div>
+                            <div class="name">Sari M.</div>
+                            <div class="prof">Mahasiswi, 23</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up delay-4">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">
+                        “Produk ini penyelamat banget! Dalam hitungan menit rambut
+                        jadi bervolume. Gak perlu ke salon lagi buat blow dry.
+                        Recommended!”
+                    </p>
+                    <div class="author">
+                        <div class="avatar">TP</div>
+                        <div>
+                            <div class="name">Tia P.</div>
+                            <div class="prof">Wirausaha, 36</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ PRICE BANNER + COUNTDOWN ═══ -->
+    <section class="section" id="pricing">
+        <div class="container">
+            <div class="price-banner">
+                <div class="inner">
+                    <div class="offer">
+                        <span class="badge">🎁 BUY 1 GET 1 FREE</span>
+                        <div class="price-main">
+                            Rp134.000 <small>/ 2 pcs</small>
+                        </div>
+                        <div class="price-cross">
+                            Harga normal: Rp227.800 <span>(hemat 70%)</span>
+                        </div>
+                        <div class="urgency-tag">
+                            <span class="dot"></span>
+                            <span>Stok terbatas — <strong id="stockUrgency">37</strong> tersisa</span>
+                        </div>
+                    </div>
+                    <div class="cta-wrap">
+                        <a href="#order" class="btn-primary">
+                            🛒 Pesan Sekarang
+                        </a>
+                        <div style="margin-top:12px; font-size:0.8rem; color:#b0a098;">
+                            ⏳ Promo berakhir dalam
+                        </div>
+                        <div class="countdown-wrap" id="countdownContainer">
+                            <div class="countdown-item">
+                                <div class="num" id="cdHours">02</div>
+                                <div class="lbl">Jam</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="num" id="cdMinutes">30</div>
+                                <div class="lbl">Menit</div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="num" id="cdSeconds">00</div>
+                                <div class="lbl">Detik</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ ORDER FORM ═══ -->
+    <section class="section" id="order" style="padding-top:0;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom:20px;">
+                <span class="section-label">📦 Pemesanan</span>
+                <h2 class="section-title ff-serif">
+                    Siap untuk <span class="highlight">Rambut Bervolume</span>?
+                </h2>
+                <p class="section-sub mx-auto" style="max-width:480px;">
+                    Isi form di bawah ini dan dapatkan <strong>BOGO gratis</strong>!
+                </p>
+            </div>
+            <div class="order-section">
+                <!-- OrderOnline Embed Code -->
+                <div class="ooef">
+                    <form class="orderonline-embed-form" data-username="importan" data-product-slug="heated-volume-clip" data-product-id="6a96ca6ec19384b97206d83e" id="oo-embed-form-heated-volume-clip-5386" data-origin="orderonline">
+                        <div class="ooef-loader">
+                            <style>
+                                .ooef-loader {
+                                    visibility: hidden;
+                                    opacity: 0;
+                                    position: absolute;
+                                    left: 0;
+                                    right: 0;
+                                    top: 0;
+                                    bottom: 0;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    flex-direction: column;
+                                    animation: ooLoadingIn 10s ease;
+                                    -webkit-animation: ooLoadingIn 10s ease;
+                                    animation-fill-mode: forwards;
+                                    overflow: hidden
+                                }
+                                @keyframes ooLoadingIn {
+                                    0% {
+                                        visibility: hidden;
+                                        opacity: 0
+                                    }
+                                    20% {
+                                        visibility: visible;
+                                        opacity: 0
+                                    }
+                                    100% {
+                                        visibility: visible;
+                                        opacity: 1
+                                    }
+                                }
+                                @-webkit-keyframes ooLoadingIn {
+                                    0% {
+                                        visibility: hidden;
+                                        opacity: 0
+                                    }
+                                    20% {
+                                        visibility: visible;
+                                        opacity: 0
+                                    }
+                                    100% {
+                                        visibility: visible;
+                                        opacity: 1
+                                    }
+                                }
+                                .ooef-loader>div,
+                                .ooef-loader>div:after {
+                                    border-radius: 50%;
+                                    width: 2.5rem;
+                                    height: 2.5rem
+                                }
+                                .ooef-loader>div {
+                                    font-size: 10px;
+                                    position: relative;
+                                    text-indent: -9999em;
+                                    border: .25rem solid #f5f5f5;
+                                    border-left: .25rem solid #55c4cf;
+                                    -webkit-transform: translateZ(0);
+                                    -ms-transform: translateZ(0);
+                                    transform: translateZ(0);
+                                    -webkit-animation: ooLoading 1.1s infinite linear;
+                                    animation: ooLoading 1.1s infinite linear
+                                }
+                                .ooef-loader.error>div {
+                                    border-left: .25rem solid #ff4500;
+                                    animation-duration: 5s
+                                }
+                                @-webkit-keyframes ooLoading {
+                                    0% {
+                                        -webkit-transform: rotate(0);
+                                        transform: rotate(0)
+                                    }
+                                    100% {
+                                        -webkit-transform: rotate(360deg);
+                                        transform: rotate(360deg)
+                                    }
+                                }
+                                @keyframes ooLoading {
+                                    0% {
+                                        -webkit-transform: rotate(0);
+                                        transform: rotate(0)
+                                    }
+                                    100% {
+                                        -webkit-transform: rotate(360deg);
+                                        transform: rotate(360deg)
+                                    }
+                                }
+                            </style>
+                            <div aria-live="polite" role="status"><div>Loading...</div></div>
+                        </div>
+                    </form>
+                </div>
+                <script>
+                    if (typeof xLogError != 'function') {
+                        var xLogError = function(error) {
+                            var req = new XMLHttpRequest();
+                            var payload = JSON.stringify({ url: document.location.href, line: error.line, stack: error
+                                    .stack });
+                            var params = 'message=' + encodeURIComponent(error.name) + '&payload=' + encodeURIComponent(
+                                payload) + '&type=embed&level=error';
+                            req.open('POST', 'https://api.orderonline.id/log', true);
+                            req.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                            req.send(params);
+                        };
+                    }
+                    try {
+                        if (typeof xEmbedScript != 'function') {
+                            var xEmbedScript = function() {
+                                ! function(w, d, e, v, id, t, s) {
+                                    if (d.getElementById(id)) return;
+                                    t = d.createElement(e);
+                                    t.async = !0;
+                                    t.src = v;
+                                    t.id = id;
+                                    s = d.getElementsByTagName(e)[0];
+                                    s.parentNode.insertBefore(t, s);
+                                }(window, document, 'script', 'https://cdn.orderonline.id/js/embed-v2-slim.min.js?v=8.0.2',
+                                    'oo-embed-js');
+                            };
+                        }
+                        if (typeof xEmbedInit != 'function') {
+                            var xEmbedInit = function(w, n) {
+                                if (w.ooe) return;
+                                n = w.ooe = function() {
+                                    n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+                                };
+                                if (!w._ooe) w._ooe = n;
+                                n.push = n;
+                                n.loaded = !0;
+                                n.version = '8.0.2';
+                                n.queue = [];
+                            };
+                        }
+                        xEmbedInit(window);
+                        ooe('setup', 'redirect', 'https://importan.orderonline.id');
+                        ooe('init', '696db1fd1e7d4492a804bf57', '6a96ca6ec19384b97206d83e', '6a96ca6ec19384b97206d83f',
+                            'oo-embed-form-heated-volume-clip-5386', {
+                                "mode": "page",
+                                "action": "Klik untuk pemesanan",
+                                "title": "Form Pemesanan",
+                                "triggerPixel": true,
+                                "triggerGtm": false
+                            });
+                        if (!window.jQuery) {
+                            ! function(w, d, e, v, id, t, s) {
+                                if (d.getElementById(id)) return;
+                                t = d.createElement(e);
+                                t.async = !0;
+                                t.src = v;
+                                t.id = id;
+                                t.addEventListener('load', xEmbedScript);
+                                s = d.getElementsByTagName(e)[0];
+                                s.parentNode.insertBefore(t, s);
+                            }(window, document, 'script', 'https://cdn.orderonline.id/js/vendor/jquery.min.js',
+                                'oo-embed-jquery');
+                        } else {
+                            xEmbedScript();
+                        }
+                    } catch (e) {
+                        xLogError(e);
+                        throw e;
+                    }
+                </script>
+                <!-- End OrderOnline Embed Code -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <p class="brand">AllWant</p>
+            <p style="margin-top:6px; font-size:0.8rem;">
+                © 2026 — Heated Hair Volume Clip Styler. All rights reserved.
+            </p>
+            <p style="margin-top:4px; font-size:0.75rem; color:#7a5f55;">
+                💖 Produk berkualitas untuk rambut bervolume impianmu.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ═══ FAKE POPUP CONTAINER ═══ -->
+    <div id="fakePopupContainer" style="position:fixed; bottom:0; left:0; z-index:9998; pointer-events:none; width:100%; padding:0 12px 12px;">
+        <!-- Popups will be injected here -->
+    </div>
+
+    <!-- ═══ SCRIPTS ═══ -->
+    <script>
+        (function() {
+            'use strict';
+
+            // ─── COUNTERS ──────────────────────────────────────────────
+            let viewers = 1250;
+            let stock = 37;
+            const viewerEls = [document.getElementById('viewerCount'), document.getElementById('viewerCount2')];
+            const stockEls = [document.getElementById('stockCount'), document.getElementById('stockCount2'), document
+                .getElementById('stockUrgency')
+            ];
+
+            function updateCounters() {
+                // viewers fluctuate
+                const delta = Math.floor(Math.random() * 6) - 2;
+                viewers = Math.max(800, viewers + delta);
+                const vStr = viewers >= 1000 ? (viewers / 1000).toFixed(1) + 'k' : String(viewers);
+                viewerEls.forEach(el => { if (el) el.textContent = vStr; });
+
+                // stock decreases slowly
+                if (Math.random() < 0.08 && stock > 2) {
+                    stock -= 1;
+                }
+                stockEls.forEach(el => { if (el) el.textContent = String(stock); });
+            }
+            setInterval(updateCounters, 5000);
+            updateCounters();
+
+            // ─── COUNTDOWN TIMER (2 jam 30 menit) ─────────────────────
+            let totalSeconds = 2 * 3600 + 30 * 60; // 2:30:00
+            const cdHours = document.getElementById('cdHours');
+            const cdMinutes = document.getElementById('cdMinutes');
+            const cdSeconds = document.getElementById('cdSeconds');
+            const cdShort = document.getElementById('countdownShort');
+
+            function formatTwo(n) { return String(n).padStart(2, '0'); }
+
+            function updateCountdown() {
+                if (totalSeconds <= 0) {
+                    cdHours.textContent = '00';
+                    cdMinutes.textContent = '00';
+                    cdSeconds.textContent = '00';
+                    if (cdShort) cdShort.textContent = '00:00:00';
+                    return;
+                }
+                const h = Math.floor(totalSeconds / 3600);
+                const m = Math.floor((totalSeconds % 3600) / 60);
+                const s = totalSeconds % 60;
+                cdHours.textContent = formatTwo(h);
+                cdMinutes.textContent = formatTwo(m);
+                cdSeconds.textContent = formatTwo(s);
+                if (cdShort) cdShort.textContent = formatTwo(h) + ':' + formatTwo(m) + ':' + formatTwo(s);
+                totalSeconds -= 1;
+            }
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+
+            // ─── GALLERY MODAL ─────────────────────────────────────────
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const modalClose = document.getElementById('modalClose');
+
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('click', function() {
+                    const src = this.getAttribute('data-src') || this.querySelector('img')?.src;
+                    if (src) {
+                        modalImg.src = src;
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            });
+
+            function closeModal() {
+                modal.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') closeModal();
+            });
+
+            // ─── FAKE POPUPS ──────────────────────────────────────────
+            const names = [
+                'Azzahra', 'Kayla', 'Nayla', 'Queena', 'Zahira', 'Alesha', 'Bianca', 'Chika',
+                'Dania', 'Elvira', 'Fathia', 'Gisella', 'Hana', 'Irena', 'Jasmine', 'Kenza',
+                'Lavina', 'Mira', 'Nabila', 'Olivia', 'Putri', 'Qilla', 'Rania', 'Salsabila',
+                'Tasya', 'Ulya', 'Vania', 'Widya', 'Xena', 'Yasmin', 'Zaskia', 'Aira',
+                'Bella', 'Cinta', 'Diva', 'Ella', 'Fiola', 'Ghea', 'Haura', 'Indira',
+                'Jelita', 'Kaila', 'Laras', 'Maya', 'Nadia', 'Ocha', 'Priska', 'Quinza',
+                'Rita', 'Sinta'
+            ];
+            const regions = [
+                'Jakarta', 'Bandung', 'Surabaya', 'Yogyakarta', 'Medan', 'Makassar',
+                'Denpasar', 'Semarang', 'Palembang', 'Balikpapan', 'Manado', 'Pontianak',
+                'Malang', 'Solo', 'Pekanbaru', 'Bogor', 'Tangerang', 'Depok', 'Bekasi',
+                'Cimahi', 'Sukabumi', 'Tasikmalaya', 'Cirebon', 'Kediri', 'Madiun',
+                'Jember', 'Banyuwangi', 'Bandar Lampung', 'Padang', 'Jambi', 'Bengkulu'
+            ];
+            const container = document.getElementById('fakePopupContainer');
+
+            function getInitials(name) {
+                return name.charAt(0) + name.charAt(name.length - 1);
+            }
+
+            function createPopup() {
+                const name = names[Math.floor(Math.random() * names.length)];
+                const region = regions[Math.floor(Math.random() * regions.length)];
+                const initials = getInitials(name);
+                const popup = document.createElement('div');
+                popup.className = 'fake-popup';
+                popup.innerHTML = `
+              <div class="popup-avatar">${initials}</div>
+              <div class="popup-body">
+                <div><span class="name">${name}</span> <span class="region">• ${region}</span></div>
+                <div class="product">🛒 membeli Heated Hair Volume Clip Styler</div>
+                <div style="font-size:0.7rem;color:#b0a098;margin-top:2px;">⏱️ baru saja</div>
+              </div>
+              <button class="popup-close" aria-label="Tutup">✕</button>
+              <div class="swipe-hint">⬆ geser</div>
+            `;
+                // Swipe / close
+                const closeBtn = popup.querySelector('.popup-close');
+                closeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    popup.classList.add('swiped');
+                    setTimeout(() => { if (popup.parentNode) popup.remove(); }, 400);
+                });
+                // Swipe up gesture (touch)
+                let startY = 0;
+                popup.addEventListener('touchstart', function(e) {
+                    startY = e.touches[0].clientY;
+                }, { passive: true });
+                popup.addEventListener('touchmove', function(e) {
+                    const dy = startY - e.touches[0].clientY;
+                    if (dy > 40) {
+                        popup.classList.add('swiped');
+                        setTimeout(() => { if (popup.parentNode) popup.remove(); }, 400);
+                    }
+                }, { passive: true });
+                // Also swipe with mouse (drag up)
+                let mouseDown = false,
+                    mouseStartY = 0;
+                popup.addEventListener('mousedown', function(e) {
+                    if (e.target.closest('.popup-close')) return;
+                    mouseDown = true;
+                    mouseStartY = e.clientY;
+                });
+                document.addEventListener('mousemove', function(e) {
+                    if (!mouseDown) return;
+                    const dy = mouseStartY - e.clientY;
+                    if (dy > 40) {
+                        popup.classList.add('swiped');
+                        setTimeout(() => { if (popup.parentNode) popup.remove(); }, 400);
+                        mouseDown = false;
+                    }
+                });
+                document.addEventListener('mouseup', function() { mouseDown = false; });
+
+                container.appendChild(popup);
+                // Auto remove after 10s if not swiped
+                setTimeout(() => {
+                    if (popup.parentNode && !popup.classList.contains('swiped')) {
+                        popup.classList.add('swiped');
+                        setTimeout(() => { if (popup.parentNode) popup.remove(); }, 400);
+                    }
+                }, 10000);
+            }
+
+            // First popup after 1s, then every 3–5 seconds
+            setTimeout(createPopup, 1000);
+            setInterval(() => {
+                if (document.visibilityState === 'visible') {
+                    createPopup();
+                }
+            }, Math.floor(Math.random() * 3000) + 3000);
+
+            // ─── SCROLL ANIMATIONS (fade-up) ──────────────────────────
+            const fadeEls = document.querySelectorAll('.fade-up');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+            fadeEls.forEach(el => observer.observe(el));
+
+            // ─── SMOOTH SCROLL for anchor links ──────────────────────
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    const target = document.querySelector(targetId);
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 80;
+                        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                });
+            });
+
+        })();
+    </script>
+
+</body>
+</html>
